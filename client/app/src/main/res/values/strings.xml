@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">unicode</string>
+    <string-array name="test">
+        <item>"HI"</item>
+    </string-array>
+    <string-array name="transportType">
+        <item>กำลังเตรียมพัสดุ</item>
+        <item>กำลังนำส่ง</item>
+        <item>จัดส่งเสร็จสิ้น</item>
+    </string-array>
+</resources>

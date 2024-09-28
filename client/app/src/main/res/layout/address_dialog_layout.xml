@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="กรอกที่อยู่ใหม่"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        />
+
+    <EditText
+        android:id="@+id/editaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="ที่อยู่ (ห้องเลขที่, ตึก, ถนน)"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/editprovince"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="เขต / จังหวัด"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/editdistrict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="เมือง / เขต"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/editzip_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="รหัสไปรษณีย์"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/editphone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="เบอร์โทรศัพท์"
+        android:inputType="text"/>
+
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CompleteProductPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Shopping Bag"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/boxImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="40dp"
+                    android:background="@drawable/boxpng" />
+
+                <TextView
+                    android:id="@+id/orderTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/boxImg"
+                    android:text="Order" />
+
+                <TextView
+                    android:id="@+id/created_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/orderTxt"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/boxImg"
+                    android:text="00/00/00" />
+
+                <TextView
+                    android:id="@+id/priceAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/created_at"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/boxImg"
+                    android:textStyle="bold"
+                    android:text="ยอดรวม 100 บาท" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProductPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/box"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/editAddressProductComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewProductPrice"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/border2"
+                android:text="กรุณาเลือกที่อยู่"
+                android:textColorHint="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/editCreditProductComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editAddressProductComplete"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/border2"
+                android:hint="กรุณาเลือกบัตรเครดิต"
+                android:textColorHint="@color/black"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edittext_black"
+        android:text="ยืนยัน"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

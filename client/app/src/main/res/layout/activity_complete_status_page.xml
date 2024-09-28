@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompleteStatusPage"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/h1"
+        android:layout_above="@id/p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="THANK YOU!"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:letterSpacing=".15"/>
+    <TextView
+        android:id="@+id/p"
+        android:layout_above="@id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="we are getting started on your order right now\nการสั่งซื้อของคุณสำเร็จ ขอบคุณที่ใช้บริการ"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:paddingRight="20sp"
+        android:paddingLeft="20sp"
+        android:gravity="center"
+        android:lineSpacingExtra="10sp"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerInParent="true"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerInParent="true"
+        android:background="@drawable/edittext_black"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="เช็คออร์เดอร์"
+        android:textColor="@color/white" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

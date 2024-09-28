@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".craditcardPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เครดิตการ์ดของฉัน"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCradit"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddCradit"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="45sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:background="@drawable/shape" />
+</RelativeLayout>

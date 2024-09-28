@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addProductType"
+        android:title="เพิ่มประเภทสินค้า" />
+    <item
+        android:id="@+id/addProduct"
+        android:title="เพิ่มสินค้า" />
+    <item
+        android:id="@+id/transportManage"
+        android:title="จัดการสถานะสินค้า" />
+</menu>

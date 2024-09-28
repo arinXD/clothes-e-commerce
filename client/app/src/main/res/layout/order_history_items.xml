@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_shape"
+    android:padding="20dp">
+    <ImageView
+        android:id="@+id/boxImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/boxpng"
+        android:layout_marginRight="20dp"
+        />
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="สั่งซื้อวันที่: "
+        android:layout_toRightOf="@id/boxImg"
+        android:layout_marginBottom="12dp"/>
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="รวมทั้งหมด: 1000 บาท"
+        android:layout_toRightOf="@id/boxImg"
+        android:layout_below="@id/dateTxt"
+        android:layout_marginTop="3dp"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOrderDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:text="รายละเอียด"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

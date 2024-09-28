@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".InsertCradit">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เพิ่มเครดิตการ์ด"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="ชื่อผู้ถือบัตร"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/editCardID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="หมายเลขบัตร"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/editexpiredate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Expire date"
+        android:textSize="18sp"
+        android:background="@drawable/border"
+        android:onClick="showDatePickerDialog"/>
+    <EditText
+        android:id="@+id/editcvv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="CVV"
+        android:inputType="text"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddCradit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Save"
+        android:textSize="20sp"/>
+
+</LinearLayout>

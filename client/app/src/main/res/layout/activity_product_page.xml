@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/productImg"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/productImg"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <TextView
+                    android:id="@+id/productName"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="product name"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnFav"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_baseline_favorite_border_24" />
+
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productName"
+                    android:layout_marginTop="20dp"
+                    android:text="price"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sizeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productPrice"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="ไซส์"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productPrice"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/sizeText"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/detailTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rcvSize"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="รายละเอียด" />
+
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rcvSize"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/detailTxt"
+                    android:text="xxxxx" />
+
+                <RelativeLayout
+                    android:id="@+id/test"
+                    android:layout_below="@id/detailTxt"
+                    android:layout_marginTop="10dp"
+                    android:padding="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnplusnumber"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/inputtest"
+                        android:background="@drawable/shape"
+                        android:text="+"
+                        android:layout_marginLeft="-8dp"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputtest"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:layout_height="wrap_content"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/amountOrder"
+                            android:layout_width="40dp"
+                            android:layout_height="50dp"
+                            android:inputType="number"
+                            android:text="1"
+                            android:textSize="10sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btndeletenumber"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="64dp"
+                        android:text="-"
+                        android:textSize="13sp"
+                        android:textColor="#FFFFFF"
+                        android:layout_toLeftOf="@id/btnplusnumber"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:background="@drawable/shape" />
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupSize"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/inputtest"
+                        android:layout_marginLeft="25dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/black"
+                            android:textColor="@color/black"
+                            android:text="S"
+                            android:textSize="15sp" />
+
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/black"
+                            android:text="M"
+                            android:textSize="15sp" />
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/black"
+                            android:text="L"
+                            android:textSize="15sp" />
+                        <androidx.appcompat.widget.AppCompatRadioButton
+                            android:id="@+id/xl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_marginRight="10dp"
+                            android:buttonTint="@color/black"
+                            android:text="XL"
+                            android:textSize="15sp" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+<!--                <EditText-->
+<!--                    android:id="@+id/sizeOrder"-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_marginLeft="0dp"-->
+<!--                    android:layout_toRightOf="@id/detail"-->
+<!--                    android:hint="ไซส์"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textSize="15sp" />-->
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPickUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/test"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_black"
+                    android:text="ใส่ตะกร้า"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/product_nav"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"-->
+    <!--        app:menu="@menu/product_nav_menu"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@drawable/border_shape" />-->
+
+</RelativeLayout>

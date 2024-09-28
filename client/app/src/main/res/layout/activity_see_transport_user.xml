@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="20dp"
+    android:paddingHorizontal="30dp"
+    tools:context=".TransportUser">
+    <TextView
+        android:id="@+id/txttitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="สถาณะการจัดส่งสินค้า"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        />
+    <RelativeLayout
+        android:id="@+id/r88"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/txttitle"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/misterbox"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/boxpng"/>
+        <TextView
+            android:id="@+id/orderTextUser"
+            android:layout_toRightOf="@+id/misterbox"
+            android:text="Order :"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/timeUser"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/orderTextUser"
+            android:layout_marginLeft="20dp"
+            android:text="Time :"
+            android:layout_toRightOf="@+id/misterbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/test2"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/timeUser"
+            android:text="ให้บริการจัดส่งโดย unicode."
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/misterbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/test3"
+            android:layout_below="@id/test2"
+            android:text="ส่งธรรมดา"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/misterbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/r88"
+        android:id="@+id/recyclerViewTransport"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เพิ่มประเภทสินค้า"
+        android:textSize="23sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="10sp"
+        />
+
+    <EditText
+        android:id="@+id/edtAddProductType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:hint="ชนิดของสินค้า"
+        android:inputType="text"/>
+
+</LinearLayout>
